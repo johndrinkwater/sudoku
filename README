@@ -1,0 +1,29 @@
+A simple and probably dumb sudoku solver. It doesn’t even read input from files or args ;P
+
+Wish it was much faster than it is, but it probably needs better thought on how to test constraints quicker. Added SKIPPABLE flag to prevent some execution, but yet it adds more on in other locations.
+
+Output should be:
+
+. . . | . . 6 | . . .
+. 5 9 | . . . | . . 8
+2 . . | . . 8 | . . .
+. 4 5 | . . . | . . .
+. . 3 | . . . | . . .
+. . 6 | . . 3 | . 5 4
+. . . | 3 2 5 | . . 6
+. . . | . . . | . . .
+. . . | . . . | . . .
+Solution found
+4 3 8 | 7 9 6 | 2 1 5
+6 5 9 | 1 3 2 | 4 7 8
+2 7 1 | 4 5 8 | 6 9 3
+7 4 5 | 6 8 1 | 9 3 2
+8 2 3 | 5 4 9 | 7 6 1
+1 9 6 | 2 7 3 | 8 5 4
+9 8 7 | 3 2 5 | 1 4 6
+3 1 4 | 8 6 7 | 5 2 9
+5 6 2 | 9 1 4 | 3 8 7
+
+This longest running puzzle completes in .3s on this machine. The first version I made did it in 2.7s, then I moved the constraints tests to rely on an offset buffer, rather than computing each time. Then I improved the tests, added the skip flag and did a few more adjustments.
+
+Surprisingly, most of this code is output. Any questions, do email.
